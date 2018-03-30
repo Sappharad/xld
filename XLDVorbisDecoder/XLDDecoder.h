@@ -1,6 +1,12 @@
 
 #import <Foundation/Foundation.h>
-#import <AppKit/AppKit.h>
+typedef int64_t xldoffset_t;
+
+typedef enum {
+    XLDNoCueSheet = 0,
+    XLDTrackTypeCueSheet,
+    XLDTextTypeCueSheet
+} XLDEmbeddedCueSheetType;
 
 @protocol XLDDecoder
 

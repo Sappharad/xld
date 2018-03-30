@@ -1,9 +1,3 @@
-typedef enum {
-	XLDNoCueSheet = 0,
-	XLDTrackTypeCueSheet,
-	XLDTextTypeCueSheet
-} XLDEmbeddedCueSheetType;
-
 #define XLD_METADATA_TITLE		@"Title"
 #define XLD_METADATA_ARTIST		@"Artist"
 #define XLD_METADATA_ALBUM		@"Album"

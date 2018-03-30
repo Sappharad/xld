@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		9E140A0A206DC08000094EC9 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 9E140A09206DC08000094EC9 /* base64.c */; };
 		BF6FC89B12618BCC006845D6 /* XLDVorbisDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6FC89A12618BCC006845D6 /* XLDVorbisDecoder.m */; };
 		BF6FC8BD12619EDB006845D6 /* Ogg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6FC8BB12619EDB006845D6 /* Ogg.framework */; };
 		BF6FC8BE12619EDB006845D6 /* Vorbis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6FC8BC12619EDB006845D6 /* Vorbis.framework */; };
-		BF8CDE7815C2A3B900433B47 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8CDE7715C2A3B900433B47 /* libcrypto.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,12 +21,14 @@
 		32DBCF630370AF2F00C91783 /* XLDVorbisDecoder_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLDVorbisDecoder_Prefix.pch; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* XLDVorbisDecoder.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XLDVorbisDecoder.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E140A08206DC08000094EC9 /* base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		9E140A09206DC08000094EC9 /* base64.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = base64.c; sourceTree = "<group>"; };
+		9EE88BFF206CA5680007A8C4 /* libcrypto.35.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.35.dylib; path = ../../../../../../../usr/lib/libcrypto.35.dylib; sourceTree = "<group>"; };
 		BF6FC89912618BCC006845D6 /* XLDVorbisDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLDVorbisDecoder.h; sourceTree = "<group>"; };
 		BF6FC89A12618BCC006845D6 /* XLDVorbisDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLDVorbisDecoder.m; sourceTree = "<group>"; };
 		BF6FC89C12618BD1006845D6 /* XLDDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLDDecoder.h; sourceTree = "<group>"; };
 		BF6FC8BB12619EDB006845D6 /* Ogg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ogg.framework; path = ../xld_frameworks/Ogg.framework; sourceTree = SOURCE_ROOT; };
 		BF6FC8BC12619EDB006845D6 /* Vorbis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vorbis.framework; path = ../xld_frameworks/Vorbis.framework; sourceTree = SOURCE_ROOT; };
-		BF8CDE7715C2A3B900433B47 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = /usr/lib/libcrypto.dylib; sourceTree = "<absolute>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -38,7 +40,6 @@
 				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
 				BF6FC8BD12619EDB006845D6 /* Ogg.framework in Frameworks */,
 				BF6FC8BE12619EDB006845D6 /* Vorbis.framework in Frameworks */,
-				BF8CDE7815C2A3B900433B47 /* libcrypto.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +54,7 @@
 				089C167CFE841241C02AAC07 /* Resources */,
 				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
 				19C28FB8FE9D52D311CA2CBB /* Products */,
+				9EE88BFE206CA5680007A8C4 /* Frameworks */,
 			);
 			name = XLDVorbisDecoder;
 			sourceTree = "<group>";
@@ -79,6 +81,8 @@
 			children = (
 				BF6FC89912618BCC006845D6 /* XLDVorbisDecoder.h */,
 				BF6FC89A12618BCC006845D6 /* XLDVorbisDecoder.m */,
+				9E140A08206DC08000094EC9 /* base64.h */,
+				9E140A09206DC08000094EC9 /* base64.c */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -89,7 +93,6 @@
 				BF6FC8BB12619EDB006845D6 /* Ogg.framework */,
 				BF6FC8BC12619EDB006845D6 /* Vorbis.framework */,
 				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
-				BF8CDE7715C2A3B900433B47 /* libcrypto.dylib */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -121,6 +124,14 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		9EE88BFE206CA5680007A8C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9EE88BFF206CA5680007A8C4 /* libcrypto.35.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,6 +158,9 @@
 /* Begin PBXProject section */
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+			};
 			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "XLDVorbisDecoder_export" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -181,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E140A0A206DC08000094EC9 /* base64.c in Sources */,
 				BF6FC89B12618BCC006845D6 /* XLDVorbisDecoder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,7 +206,7 @@
 		1DEB913B08733D840010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -203,8 +218,11 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = XLDVorbisDecoder_Prefix.pch;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../xld_frameworks/";
 				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = /usr/lib;
 				PRODUCT_NAME = XLDVorbisDecoder;
+				VALID_ARCHS = "i386 ppc x86_64";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
@@ -212,7 +230,7 @@
 		1DEB913C08733D840010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -221,8 +239,14 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = XLDVorbisDecoder_Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"\"$(SRCROOT)/../xld_frameworks/",
+				);
 				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = /usr/lib;
 				PRODUCT_NAME = XLDVorbisDecoder;
+				VALID_ARCHS = "i386 ppc x86_64";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
@@ -234,9 +258,9 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PREBINDING = NO;
-				VALID_ARCHS = "i386 ppc";
+				VALID_ARCHS = "i386 ppc x86_64";
 			};
 			name = Debug;
 		};
@@ -247,9 +271,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = /usr/local/include;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PREBINDING = NO;
-				VALID_ARCHS = "i386 ppc";
+				VALID_ARCHS = "i386 ppc x86_64";
 			};
 			name = Release;
 		};

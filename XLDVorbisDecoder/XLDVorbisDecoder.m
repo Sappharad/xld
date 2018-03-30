@@ -1,26 +1,13 @@
 #import <Foundation/Foundation.h>
-
-typedef int64_t xldoffset_t;
-
-#import <openssl/bio.h>
-#import <openssl/evp.h>
+#import "base64.h"
 #import "XLDVorbisDecoder.h"
 
-static unsigned char *base64dec(char *input, int length)
+static char *base64dec(char *input, int length)
 {
-	BIO *b64, *bmem;
-	
-	unsigned char *buffer = (unsigned char *)malloc(length);
+	char *buffer = (char *)malloc(length);
 	memset(buffer, 0, length);
-	
-	b64 = BIO_new(BIO_f_base64());
-	BIO_set_flags(b64, BIO_FLAGS_BASE64_NO_NL);
-	bmem = BIO_new_mem_buf(input, length);
-	bmem = BIO_push(b64, bmem);
-	
-	BIO_read(bmem, buffer, length);
-	
-	BIO_free_all(bmem);
+    
+    Base64decode(buffer, input);
 	
 	return buffer;
 }
@@ -249,7 +236,7 @@ static unsigned char *base64dec(char *input, int length)
 				}
 			}
 			else if(!strncasecmp(comments->user_comments[i],"METADATA_BLOCK_PICTURE=",23)) {
-				unsigned char *buf = base64dec(comments->user_comments[i]+23, comments->comment_lengths[i]-23);
+				char *buf = base64dec(comments->user_comments[i]+23, comments->comment_lengths[i]-23);
 				int type = OSSwapBigToHostInt32(*(int *)(buf));
 				int mimeLength = OSSwapBigToHostInt32(*(int *)(buf+4));
 				int descLength = OSSwapBigToHostInt32(*(int *)(buf+8+mimeLength));
